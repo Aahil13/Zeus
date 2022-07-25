@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeus</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <section id="login" class="hidden">
+        <div class="hero-box">
+          <img src="images/Smiley-face.svg" alt="smiley-illustration" />
+        </div>
+        <p>
+          Hi, I'm zeus. <span> <br />What's your name?</span>
+        </p>
+        <form>
+          <div class="name-input_box">
+            <label for="name"></label>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Insert your nickname"
+              required
+            />
+          </div>
+          <div class="submit-button-box">
+            <div class="btn">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section id="app">
+        <div class="city-info">
+          <h1 class="city-name">Port Harcourt</h1>
+          <h3 class="city-date_time">SATURDAY 13:00</h3>
+        </div>
+        <div class="cloud-icon">
+          <img src="images/sun.svg" alt="sun-img" />
+        </div>
+        <div class="app-info">
+          <h1 class="temp-degree">22°C</h1>
+          <h3 class="greeting">Good Afternoon <br />Prince</h3>
+        </div>
+        <hr size="3" />
+        <div class="weather-info">
+          <div class="current-time-info">
+            <div class="sun-icon">
+              <img class="weather-icons" src="images/beach.png" alt="beach" />
+            </div>
+            <h4 class="sun">SUNRISE</h4>
+            <h2 class="time"></h2>
+          </div>
+          <div class="current-wind-info">
+            <div class="wind-icon">
+              <img class="weather-icons" src="images/wind.png" alt="wind" />
+            </div>
+            <h4 class="wind">WIND</h4>
+            <h2 class="wind-pressure"></h2>
+          </div>
+          <div class="current-temp-info">
+            <div class="temp-icon">
+              <img class="weather-icons" src="images/thermometer.png" alt="thermometer" />
+            </div>
+            <h4 class="temp">TEMPERATURE</h4>
+            <h2 class="temp-deg"></h2>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
