@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zeus</title>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <script type="module" defer src="sunny.js"></script>
+    <script type="module" defer src="login.js"></script>
   </head>
   <body>
     <main>
@@ -41,7 +42,7 @@
           <h1 class="city-name">Port Harcourt</h1>
           <h3 class="city-date_time">SATURDAY 13:00</h3>
         </div>
-        <div class="cloud-icon">
+        <div class="weather-illustration">
           <img src="images/sun.svg" alt="sun-img" />
         </div>
         <div class="app-info">
@@ -66,7 +67,11 @@
           </div>
           <div class="current-temp-info">
             <div class="temp-icon">
-              <img class="weather-icons" src="images/thermometer.png" alt="thermometer" />
+              <img
+                class="weather-icons"
+                src="images/thermometer.png"
+                alt="thermometer"
+              />
             </div>
             <h4 class="temp">TEMPERATURE</h4>
             <h2 class="temp-deg"></h2>
