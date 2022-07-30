@@ -1,23 +1,17 @@
-class Location {
-  constructor() {
-    this.getPosition();
-  }
+function getPosition() {
+  return new Promise((resolve, reject) =>
+    navigator.geolocation.getCurrentPosition(resolve, reject)
+  );
+}
 
-  getPosition() {
-    navigator.geolocation.getCurrentPosition(this.getCoords, this.error);
-  }
-
-  set getCoords(position) {
+async function getCoordinates() {
+  try {
+    const position = await getPosition();
     const { latitude, longitude } = position.coords;
     console.log(latitude, longitude);
-  }
-
-  error(err) {
-    console.error(err);
+  } catch (err) {
+    console.error(err.message);
   }
 }
 
-
-export default function () {
-  getCoords;
-}
+await getCoordinates();
