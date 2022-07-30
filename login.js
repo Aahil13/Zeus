@@ -5,28 +5,18 @@ const btn = document.querySelector(".btn");
 const input = document.querySelector("input");
 const loginEl = document.getElementById("login");
 const mainEl = document.querySelector("main");
+const app = document.querySelector("#app");
 
-class Login {
-  constructor(form) {
-    this.form = form;
-    this.handleBtn();
-    this.handleForm();
-  }
+const login = function () {
+  form.addEventListener("submit", validateUser);
+  btn.addEventListener("click", validateUser);
 
-  handleForm() {
-    this.form.addEventListener("submit", this.validateUser.bind(this));
-  }
-
-  handleBtn() {
-    btn.addEventListener("click", this.validateUser.bind(this));
-  }
-
-  validateUser(e) {
+  function validateUser(e) {
     e.preventDefault();
-    this.handleValidation();
+    handleValidation();
   }
 
-  handleValidation() {
+  function handleValidation() {
     if (input.value.includes(" ") || input.value === "") {
       alert(`Zeus says ${input.value} is not a valid name`);
     } else {
@@ -34,13 +24,13 @@ class Login {
         input.value.slice(0, 1).toUpperCase() + input.value.slice(1);
       console.log(input.value);
       alert(`Zeus says Welcome ${input.value}`);
-      loginEl.classList.contains("hidden")
-        ? mainEl.classList.add("hidden")
-        : loginEl.classList.add("hidden");
-      // loginEl.classList.add("hidden");
-      // main.style.display = "block";
+      input.value = "";
+      if (app.classList.contains("hidden")) {
+        loginEl.classList.add("hidden");
+        app.classList.remove("hidden");
+      }
     }
   }
-}
+};
 
-const login = new Login(form);
+login();
