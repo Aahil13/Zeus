@@ -1,0 +1,7 @@
+#dependencies
+node_modules
+.vscode
+
+#files
+.env
+package-lock.json
