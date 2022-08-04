@@ -6,6 +6,18 @@ const input = document.querySelector("input");
 const loginEl = document.getElementById("login");
 const mainEl = document.querySelector("main");
 const appEl = document.querySelector("#app");
+const cityName = document.querySelector(".city-name");
+const cityDayNTime = document.querySelector(".city-date_time");
+
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
 const app = function () {
   form.addEventListener("submit", validateUser);
@@ -39,6 +51,18 @@ const app = function () {
       );
       const data = await res.json();
       console.log(data);
+
+      //Populating the User Interface with API data
+      //city Name
+      cityName.textContent = data.name;
+
+      //City date and time
+      setInterval(() => {
+        let date = new Date();
+        cityDayNTime.innerHTML = `${
+          days[date.getUTCDay().toString()]
+        } ${date.getHours()}:${date.getMinutes()}`;
+      }, 1000);
     } catch (error) {
       console.error(err);
     }
