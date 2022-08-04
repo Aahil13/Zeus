@@ -65,11 +65,9 @@ main {
   height: 100%;
 }
 
-.weather-info {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
+hr {
+  margin-top: 25px;
+  margin-bottom: 5px;
 }
 
 #login div {
