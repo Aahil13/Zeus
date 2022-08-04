@@ -8,6 +8,7 @@ const mainEl = document.querySelector("main");
 const appEl = document.querySelector("#app");
 const cityName = document.querySelector(".city-name");
 const cityDayNTime = document.querySelector(".city-date_time");
+const mainTemp = document.querySelector(".temp-degree");
 
 const days = [
   "Sunday",
@@ -63,6 +64,11 @@ const app = function () {
           days[date.getUTCDay().toString()]
         } ${date.getHours()}:${date.getMinutes()}`;
       }, 1000);
+
+      //city Temperature
+      mainTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
+
+      
     } catch (error) {
       console.error(err);
     }
