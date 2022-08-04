@@ -13,6 +13,7 @@ const greeting = document.querySelector(".greeting");
 const userName = document.querySelector(".username");
 const windEl = document.querySelector(".wind-pressure");
 const sunriseEl = document.querySelector(".time");
+const tempEl = document.querySelector(".temp-deg");
 
 const days = [
   "Sunday",
@@ -67,11 +68,14 @@ const app = function () {
         let date = new Date();
         cityDayNTime.innerHTML = `${
           days[date.getUTCDay().toString()]
-        } ${date.getHours()}:${date.getMinutes()}`;
+        }, ${date.getHours()}:${date.getMinutes()}`;
       }, 1000);
 
       //city Temperature
-      mainTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
+      [tempEl, mainTemp].forEach(
+        (e) => (e.innerHTML = `${Math.floor(data.main.temp)}°C`)
+      );
+      // mainTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
 
       //greeting
       if (new Date().getHours() >= 0 && new Date().getHours() < 12) {
