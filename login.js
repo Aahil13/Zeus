@@ -11,7 +11,8 @@ const cityDayNTime = document.querySelector(".city-date_time");
 const mainTemp = document.querySelector(".temp-degree");
 const greeting = document.querySelector(".greeting");
 const userName = document.querySelector(".username");
-
+const windEl = document.querySelector(".wind-pressure");
+const sunriseEl = document.querySelector(".time");
 
 const days = [
   "Sunday",
@@ -82,7 +83,12 @@ const app = function () {
       }
 
       //wind
+      windEl.textContent = `${Math.trunc(data.wind.speed)}m/s`;
 
+      //sunriseEl
+      sunriseEl.textContent = `${new Date(
+        data.sys.sunrise
+      ).getHours()}:${new Date(data.sys.sunrise).getMinutes()}`;
     } catch (error) {
       console.error(err);
     }
