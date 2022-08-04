@@ -9,6 +9,9 @@ const appEl = document.querySelector("#app");
 const cityName = document.querySelector(".city-name");
 const cityDayNTime = document.querySelector(".city-date_time");
 const mainTemp = document.querySelector(".temp-degree");
+const greeting = document.querySelector(".greeting");
+const userName = document.querySelector(".username");
+
 
 const days = [
   "Sunday",
@@ -35,6 +38,7 @@ const app = function () {
     } else {
       input.value =
         input.value.slice(0, 1).toUpperCase() + input.value.slice(1);
+      userName.textContent = `${input.value}`;
       alert(`Zeus says Welcome ${input.value}`);
       if (appEl.classList.contains("hidden")) {
         loginEl.classList.add("hidden");
@@ -53,7 +57,7 @@ const app = function () {
       const data = await res.json();
       console.log(data);
 
-      //Populating the User Interface with API data
+      /////Populating the User Interface with API data
       //city Name
       cityName.textContent = data.name;
 
@@ -68,7 +72,17 @@ const app = function () {
       //city Temperature
       mainTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
 
-      
+      //greeting
+      if (new Date().getHours() >= 0 && new Date().getHours() < 12) {
+        greeting.textContent = `Good Morning `;
+      } else if (new Date().getHours() >= 12 && new Date().getHours() < 18) {
+        greeting.textContent = `Good Afternoon `;
+      } else if (new Date().getHours() >= 13 && new Date().getHours() < 23) {
+        greeting.textContent = `Good Evening `;
+      }
+
+      //wind
+
     } catch (error) {
       console.error(err);
     }
