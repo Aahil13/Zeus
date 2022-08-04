@@ -47,7 +47,7 @@ const app = function () {
       const { latitude, longitude } = position.coords;
       const API_KEY = "b63fcba4cca550c9f431d0e1b0a2ba13";
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
       );
       const data = await res.json();
       console.log(data);
