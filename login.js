@@ -25,6 +25,8 @@ const days = [
   "Saturday",
 ];
 
+input.focus();
+
 const app = function () {
   form.addEventListener("submit", validateUser);
   btn.addEventListener("click", validateUser);
@@ -69,12 +71,15 @@ const app = function () {
         cityDayNTime.innerHTML = `${
           days[date.getUTCDay().toString()]
         }, ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-      }, 1000);
 
-      //city Temperature
-      [tempEl, mainTemp].forEach(
-        (e) => (e.innerHTML = `${Math.floor(data.main.temp)}°C`)
-      );
+        //city Temperature
+        [tempEl, mainTemp].forEach(
+          (e) => (e.innerHTML = `${Math.floor(data.main.temp)}°C`)
+        );
+
+        //wind
+        windEl.textContent = `${Math.trunc(data.wind.speed)}m/s`;
+      }, 1000);
 
       //greeting
       if (new Date().getHours() >= 0 && new Date().getHours() < 12) {
@@ -85,13 +90,13 @@ const app = function () {
         greeting.textContent = `Good Evening `;
       }
 
-      //wind
-      windEl.textContent = `${Math.trunc(data.wind.speed)}m/s`;
-
       //sunriseEl
       sunriseEl.textContent = `${new Date(
         data.sys.sunrise
       ).getHours()}:${new Date(data.sys.sunrise).getMinutes()}`;
+
+      //Background Image
+      
     } catch (error) {
       console.error(err);
     }
