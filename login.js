@@ -75,7 +75,6 @@ const app = function () {
       [tempEl, mainTemp].forEach(
         (e) => (e.innerHTML = `${Math.floor(data.main.temp)}°C`)
       );
-      // mainTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
 
       //greeting
       if (new Date().getHours() >= 0 && new Date().getHours() < 12) {
