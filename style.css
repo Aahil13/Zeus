@@ -27,7 +27,8 @@ h1 {
   font-weight: 900;
 }
 
-h2, h3{
+h2,
+h3 {
   font-weight: 200;
 }
 
@@ -89,14 +90,14 @@ hr {
   padding: 5px;
   width: 100%;
   background: none !important;
-  font-family: "Alfa Slab One", cursive;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
   color: black;
 }
 
 .name-input_box input::placeholder {
-  font-family: "Alfa Slab One", cursive;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
   color: black;
 }
 
@@ -148,8 +149,8 @@ hr {
 
 button {
   border: none;
-  font-family: "Alfa Slab One", cursive;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
 }
 
 .hidden {
