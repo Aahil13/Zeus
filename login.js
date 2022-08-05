@@ -68,7 +68,7 @@ const app = function () {
         let date = new Date();
         cityDayNTime.innerHTML = `${
           days[date.getUTCDay().toString()]
-        }, ${date.getHours()}:${date.getMinutes()}`;
+        }, ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
       }, 1000);
 
       //city Temperature
