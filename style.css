@@ -14,7 +14,7 @@ body {
   font-weight: 200;
   width: 100%;
   height: 100vh;
-  background-position: center center;
+  background-position:center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -173,16 +173,23 @@ button {
   padding: 2rem;
 }
 
-#request h1{
-  margin-bottom: 2rem;
-}
-
 .menu{
   position: absolute;
 }
 
-.menu:hover{
+.menu:hover, .close:hover{
   cursor: pointer;
+}
+
+#request header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.close{
+  width: 30px;
 }
 
 
