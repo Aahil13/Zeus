@@ -7,22 +7,16 @@
 }
 
 body {
-  overflow-x: hidden;
   color: rgb(37, 36, 36);
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 200;
   width: 100%;
-  height: 100vh;
-  background-position:center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  background-position: center;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(2rem, 2.5vw, 4rem);
   font-weight: 900;
 }
 
@@ -31,9 +25,23 @@ h3 {
   font-weight: 200;
 }
 
-main {
+.login-section {
   width: 100%;
-  height: 100%;
+  background-position: center;
+  background-image: url(./images/snow1.jpg);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, fr);
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  width: 15%;
+  margin: 20px auto 5px;
 }
 
 #login {
@@ -45,16 +53,11 @@ main {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 40%);
 }
 
 #app {
   text-align: center;
-  padding: 1.5rem;
-  width: 100%;
-  height: 100vh;
+  padding-block: 1rem;
 }
 
 .weather-illustration {
@@ -68,11 +71,6 @@ main {
   height: 100%;
 }
 
-hr {
-  width: 10%;
-  margin: 20px auto 5px;
-}
-
 #login div {
   padding: 0.5rem 0;
 }
@@ -82,7 +80,8 @@ hr {
   width: 50%;
 }
 
-.name-input_box input, #request input {
+.name-input_box input,
+#request input {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
@@ -94,7 +93,8 @@ hr {
   color: black;
 }
 
-.name-input_box input::placeholder, #request input {
+.name-input_box input::placeholder,
+#request input {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   color: black;
@@ -158,38 +158,56 @@ button {
 }
 
 .weather-info {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .weather-icons {
   width: 25px;
 }
 
-#request{
+#request {
   height: 100vh;
   background-color: #fff;
   z-index: 10;
   padding: 2rem;
 }
 
-.menu{
+.menu, .back{
   position: absolute;
 }
 
-.menu:hover, .close:hover{
+.menu:hover,
+.close:hover, 
+.back {
   cursor: pointer;
 }
 
-#request header{
+#request header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
 
-.close{
+.close {
   width: 30px;
 }
 
-
+@media (max-width: 500px) {
+  .weather-illustration {
+    width: 100%;
+  }
+  .weather-illustration img {
+    width: 80%;
+  }
+  body {
+    font-size: 12px;
+  }
+  #login {
+    width: 80%;
+  }
+  .menu-img {
+    width: 30px;
+  }
+}

@@ -14,7 +14,7 @@ const requestInput = document.querySelector(".request-input");
 const requestForm = document.querySelector(".request-form");
 
 const form = document.querySelector("form");
-const loginEl = document.getElementById("login");
+const loginEl = document.querySelector(".login-section");
 const mainEl = document.querySelector("main");
 const cityName = document.querySelector(".city-name");
 const cityDayNTime = document.querySelector(".city-date_time");
@@ -26,6 +26,7 @@ const sunriseEl = document.querySelector(".time");
 const tempEl = document.querySelector(".temp-deg");
 const weatherImg = document.querySelector(".weather-illustration-img");
 const menuEl = document.querySelector(".menu");
+const backEl = document.querySelector(".back");
 
 const days = [
   "Sunday",
@@ -79,7 +80,6 @@ function getPosition() {
         `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
       );
       const data = await res.json();
-      console.log(data);
 
       /////Populating the User Interface with API data
       displayWeatherUI(data);
@@ -136,6 +136,7 @@ function displayWeatherUI(data) {
   }
 }
 
+//Events that control the request section
 requestForm.addEventListener("submit", requestLocation);
 closeBtn.addEventListener("click", closeRequestSection);
 menuEl.addEventListener("click", displayRequestSection);
@@ -149,13 +150,15 @@ function requestLocation(e) {
   } else {
     async function requestNewLocation() {
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${requestInput.value}&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${requestInput.value}&appid=${API_KEY}&units=metric`
       );
       const data = await res.json();
 
       if (data.cod === "404") {
         alert(`Zeus says ${requestInput.value} ${data.message}`);
       } else {
+        menuEl.classList.add("hidden");
+        backEl.classList.remove("hidden");
         appEl.classList.remove("hidden");
         requestEl.classList.add("hidden");
       }
