@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A Weather Desktop Application">
+    <meta name="description" content="A Weather Desktop Application" />
     <title>Zeus</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="login.js"></script>
@@ -38,12 +38,19 @@
         </form>
       </section>
       <section id="app" class="hidden">
+        <div class="menu">
+          <img src="images/kebab.png" alt="kebab-menu" />
+        </div>
         <div class="city-info">
           <h1 class="city-name">Port Harcourt</h1>
           <h3 class="city-date_time">SATURDAY 13:00</h3>
         </div>
         <div class="weather-illustration">
-          <img class="weather-illustration-img" src="images/sun.svg" alt="sun-img" />
+          <img
+            class="weather-illustration-img"
+            src="images/sun.svg"
+            alt="sun-img"
+          />
         </div>
         <div class="app-info">
           <h1 class="temp-degree">22°C</h1>
@@ -78,6 +85,16 @@
             <h2 class="temp-deg"></h2>
           </div>
         </div>
+      </section>
+      <section id="request" class="hidden">
+        <h1>You can search for any location</h1>
+        <form>
+          <input
+            type="text"
+            name="request"
+            placeholder="Please insert Location"
+          />
+        </form>
       </section>
     </main>
   </body>
