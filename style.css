@@ -207,7 +207,7 @@ button {
   #login {
     width: 80%;
   }
-  .menu-img {
+  .menu-img, .back-img {
     width: 30px;
   }
 }
