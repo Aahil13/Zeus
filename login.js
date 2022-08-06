@@ -140,6 +140,7 @@ function displayWeatherUI(data) {
 requestForm.addEventListener("submit", requestLocation);
 closeBtn.addEventListener("click", closeRequestSection);
 menuEl.addEventListener("click", displayRequestSection);
+backEl.addEventListener("click", handleReverse);
 
 //gets the location requested by the user
 function requestLocation(e) {
@@ -181,4 +182,11 @@ function displayRequestSection() {
 function closeRequestSection() {
   requestEl.classList.add("hidden");
   appEl.classList.remove("hidden");
+}
+
+//taks the page back to it's normal location
+function handleReverse() {
+  backEl.classList.add("hidden");
+  getPosition();
+  menuEl.classList.remove("hidden");
 }
