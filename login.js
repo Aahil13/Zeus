@@ -14,6 +14,7 @@ const userName = document.querySelector(".username");
 const windEl = document.querySelector(".wind-pressure");
 const sunriseEl = document.querySelector(".time");
 const tempEl = document.querySelector(".temp-deg");
+const weatherImg = document.querySelector(".weather-illustration-img");
 
 const days = [
   "Sunday",
@@ -101,10 +102,12 @@ const app = function () {
         data.weather[0].main === "Clouds"
       ) {
         document.body.style.backgroundImage = "url(./images/stormy-cloud.jpg)";
-        appEl.style.color = '#fff'
+        appEl.style.color = "#fff";
+        weatherImg.src = "images/cloud.png";
       } else {
         document.body.style.backgroundImage =
           "url(./images/sunny-cloud-desktop.jpg)";
+        weatherImg.src = "images/sun.svg";
       }
     } catch (error) {
       console.error(err);
