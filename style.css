@@ -82,7 +82,7 @@ hr {
   width: 50%;
 }
 
-.name-input_box input {
+.name-input_box input, #request input {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
@@ -94,7 +94,7 @@ hr {
   color: black;
 }
 
-.name-input_box input::placeholder {
+.name-input_box input::placeholder, #request input {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   color: black;
@@ -150,6 +150,7 @@ button {
   border: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
+  background: none;
 }
 
 .hidden {
@@ -164,3 +165,24 @@ button {
 .weather-icons {
   width: 25px;
 }
+
+#request{
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+  padding: 2rem;
+}
+
+#request h1{
+  margin-bottom: 2rem;
+}
+
+.menu{
+  position: absolute;
+}
+
+.menu:hover{
+  cursor: pointer;
+}
+
+
