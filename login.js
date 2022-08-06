@@ -96,7 +96,16 @@ const app = function () {
       ).getHours()}:${new Date(data.sys.sunrise).getMinutes()}`;
 
       //Background Image
-      
+      if (
+        data.weather[0].main === "Rain" ||
+        data.weather[0].main === "Clouds"
+      ) {
+        document.body.style.backgroundImage = "url(./images/stormy-cloud.jpg)";
+        appEl.style.color = '#fff'
+      } else {
+        document.body.style.backgroundImage =
+          "url(./images/sunny-cloud-desktop.jpg)";
+      }
     } catch (error) {
       console.error(err);
     }
