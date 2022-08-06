@@ -15,6 +15,8 @@ const windEl = document.querySelector(".wind-pressure");
 const sunriseEl = document.querySelector(".time");
 const tempEl = document.querySelector(".temp-deg");
 const weatherImg = document.querySelector(".weather-illustration-img");
+const menuEl = document.querySelector(".menu");
+const requestEl = document.getElementById('request')
 
 const days = [
   "Sunday",
@@ -116,3 +118,10 @@ const app = function () {
 };
 
 app();
+
+menuEl.addEventListener("click", () => {
+  appEl.classList.add("hidden");
+  requestEl.classList.remove('hidden')
+});
+
+
