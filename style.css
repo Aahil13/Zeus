@@ -25,6 +25,16 @@ h3 {
   font-weight: 200;
 }
 
+img {
+  max-width: 100%;
+}
+
+hr {
+  width: 15%;
+  margin: 20px auto 5px;
+}
+/* -------------------- START LOGIN SECTION------------------------------------ */
+
 .login-section {
   width: 100%;
   background-position: center;
@@ -35,14 +45,6 @@ h3 {
   align-items: center;
 }
 
-img {
-  max-width: 100%;
-}
-
-hr {
-  width: 15%;
-  margin: 20px auto 5px;
-}
 
 #login {
   border-radius: 8px;
@@ -55,22 +57,6 @@ hr {
   margin: 0 auto;
 }
 
-#app {
-  text-align: center;
-  padding-block: 1rem;
-}
-
-.weather-illustration {
-  width: 350px;
-  height: 350px;
-  margin: 0 auto;
-}
-
-.weather-illustration img {
-  width: 100%;
-  height: 100%;
-}
-
 #login div {
   padding: 0.5rem 0;
 }
@@ -78,26 +64,6 @@ hr {
 .hero-box {
   margin: 0 auto;
   width: 50%;
-}
-
-.name-input_box input,
-#request input {
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
-  padding: 5px;
-  width: 100%;
-  background: none !important;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-  color: black;
-}
-
-.name-input_box input::placeholder,
-#request input {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-  color: black;
 }
 
 .btn {
@@ -153,8 +119,44 @@ button {
   background: none;
 }
 
-.hidden {
-  display: none;
+.name-input_box input,
+#request input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  background: none !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  color: black;
+}
+
+.name-input_box input::placeholder,
+#request input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  color: black;
+}
+/* -------------------- END LOGIN SECTION------------------------------------ */
+
+/* -------------------- START APP SECTION------------------------------------ */
+
+
+#app {
+  text-align: center;
+  padding-block: 1rem;
+}
+
+.weather-illustration {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.weather-illustration img {
+  width: 100%;
+  height: 100%;
 }
 
 .weather-info {
@@ -166,11 +168,35 @@ button {
   width: 25px;
 }
 
+/* -------------------- END APP SECTION------------------------------------ */
+
+
+/* -------------------- START REQUEST SECTION------------------------------------ */
+
+
 #request {
   height: 100vh;
   background-color: #fff;
   z-index: 10;
   padding: 2rem;
+}
+
+.close {
+  width: 30px;
+}
+
+#request header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* --------------------END REQUEST SECTION------------------------------------ */
+
+
+.hidden {
+  display: none;
 }
 
 .menu, .back{
@@ -183,16 +209,6 @@ button {
   cursor: pointer;
 }
 
-#request header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.close {
-  width: 30px;
-}
 
 @media (max-width: 500px) {
   .weather-illustration {
@@ -211,3 +227,5 @@ button {
     width: 30px;
   }
 }
+
+
