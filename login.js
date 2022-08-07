@@ -1,19 +1,12 @@
 "use strict";
 
-//Button elements
+//login elements
+const form = document.querySelector("form");
 const btn = document.querySelector(".btn");
-const closeBtn = document.querySelector(".close");
 
 //app section element
 const appEl = document.querySelector("#app");
 const appInput = document.querySelector("input");
-
-//Request section elements
-const requestEl = document.getElementById("request");
-const requestInput = document.querySelector(".request-input");
-const requestForm = document.querySelector(".request-form");
-
-const form = document.querySelector("form");
 const loginEl = document.querySelector(".login-section");
 const mainEl = document.querySelector("main");
 const cityName = document.querySelector(".city-name");
@@ -26,7 +19,14 @@ const sunriseEl = document.querySelector(".time");
 const tempEl = document.querySelector(".temp-deg");
 const weatherImg = document.querySelector(".weather-illustration-img");
 const menuEl = document.querySelector(".menu");
+
+//Request section elements
+const requestEl = document.getElementById("request");
+const requestInput = document.querySelector(".request-input");
+const requestForm = document.querySelector(".request-form");
+const closeBtn = document.querySelector(".close");
 const backEl = document.querySelector(".back");
+
 
 const days = [
   "Sunday",
@@ -184,7 +184,7 @@ function closeRequestSection() {
   appEl.classList.remove("hidden");
 }
 
-//taks the page back to it's normal location
+//takes the page back to it's normal location
 function handleReverse() {
   backEl.classList.add("hidden");
   getPosition();
