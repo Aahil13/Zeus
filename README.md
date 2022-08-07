@@ -32,8 +32,7 @@ In the Zeus app, you will find the following features;
 ![login](https://user-images.githubusercontent.com/63567230/183277770-f8998557-dfcb-48c9-a43c-9e6e4a24c8c9.JPG)
 ![weather App](https://user-images.githubusercontent.com/63567230/183277775-ef71ae62-6489-4041-8c1b-aef0c87b1cf1.JPG)
 
-### Links: 
-
+### Links: https://zeusweather.netlify.app/
 
 ## TODO
 
